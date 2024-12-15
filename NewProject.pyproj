@@ -1,0 +1,131 @@
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <Name>NewProject</Name>
+    <RootNamespace>NewProject</RootNamespace>
+    <InterpreterId>MSBuild|env|$(MSBuildProjectFullPath)</InterpreterId>
+  </PropertyGroup>
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>99fd6e4c-cdbc-4621-92df-ba366a8aa0ab</ProjectGuid>
+    <ProjectHome>.</ProjectHome>
+    <ProjectTypeGuids>{5F0BE9CA-D677-4A4D-8806-6076C0FAAD37};{349c5851-65df-11da-9384-00065b846f21};{888888a0-9f3d-457c-b088-3a5042f75d52}</ProjectTypeGuids>
+    <StartupFile>manage.py</StartupFile>
+    <SearchPath>
+    </SearchPath>
+    <WorkingDirectory>.</WorkingDirectory>
+    <LaunchProvider>Django launcher</LaunchProvider>
+    <DjangoSettingsModule>NewProject.settings</DjangoSettingsModule>
+    <WebBrowserUrl>http://localhost</WebBrowserUrl>
+    <OutputPath>.</OutputPath>
+    <SuppressCollectPythonCloudServiceFiles>true</SuppressCollectPythonCloudServiceFiles>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Debug' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)' == 'Release' ">
+    <DebugSymbols>true</DebugSymbols>
+    <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="manage.py" />
+    <Compile Include="NewProject\__init__.py" />
+    <Compile Include="NewProject\settings.py" />
+    <Compile Include="NewProject\urls.py" />
+    <Compile Include="NewProject\wsgi.py" />
+    <Compile Include="NewSystem\admin.py" />
+    <Compile Include="NewSystem\apps.py" />
+    <Compile Include="NewSystem\forms.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NewSystem\migrations\__init__.py" />
+    <Compile Include="NewSystem\models.py" />
+    <Compile Include="NewSystem\tests.py" />
+    <Compile Include="NewSystem\urls.py">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="NewSystem\views.py" />
+    <Compile Include="NewSystem\__init__.py" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="NewSystem\static\css\img1.jpg" />
+    <Content Include="NewSystem\static\css\img2.jpg" />
+    <Content Include="NewSystem\static\css\img3.jpg" />
+    <Content Include="NewSystem\static\css\img4.jpg" />
+    <Content Include="NewSystem\static\css\img5.jpg" />
+    <Content Include="NewSystem\static\css\img6.jpg" />
+    <Content Include="NewSystem\static\css\main.css" />
+    <Content Include="NewSystem\templates\NewSystem\base.html" />
+    <Content Include="NewSystem\templates\NewSystem\dashboard.html" />
+    <Content Include="NewSystem\templates\NewSystem\delete.html" />
+    <Content Include="NewSystem\templates\NewSystem\home.html" />
+    <Content Include="NewSystem\templates\NewSystem\index.html" />
+    <Content Include="NewSystem\templates\NewSystem\login.html" />
+    <Content Include="NewSystem\templates\NewSystem\logout.html" />
+    <Content Include="NewSystem\templates\NewSystem\navbar.html" />
+    <Content Include="NewSystem\templates\NewSystem\sign-in.html" />
+    <Content Include="requirements.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="NewProject\" />
+    <Folder Include="NewSystem\" />
+    <Folder Include="NewSystem\migrations\" />
+    <Folder Include="NewSystem\static\" />
+    <Folder Include="NewSystem\static\css\" />
+    <Folder Include="NewSystem\templates\" />
+    <Folder Include="NewSystem\templates\NewSystem\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Interpreter Include="env\">
+      <Id>env</Id>
+      <Version>3.9</Version>
+      <Description>env (Python 3.9 (64-bit))</Description>
+      <InterpreterPath>Scripts\python.exe</InterpreterPath>
+      <WindowsInterpreterPath>Scripts\pythonw.exe</WindowsInterpreterPath>
+      <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
+      <Architecture>X64</Architecture>
+    </Interpreter>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.Django.targets" />
+  <!-- Specify pre- and post-build commands in the BeforeBuild and 
+       AfterBuild targets below. -->
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <AutoAssignPort>True</AutoAssignPort>
+          <UseCustomServer>True</UseCustomServer>
+          <CustomServerUrl>http://localhost</CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}" User="">
+        <WebProjectProperties>
+          <StartPageUrl>
+          </StartPageUrl>
+          <StartAction>CurrentPage</StartAction>
+          <AspNetDebugging>True</AspNetDebugging>
+          <SilverlightDebugging>False</SilverlightDebugging>
+          <NativeDebugging>False</NativeDebugging>
+          <SQLDebugging>False</SQLDebugging>
+          <ExternalProgram>
+          </ExternalProgram>
+          <StartExternalURL>
+          </StartExternalURL>
+          <StartCmdLineArguments>
+          </StartCmdLineArguments>
+          <StartWorkingDirectory>
+          </StartWorkingDirectory>
+          <EnableENC>False</EnableENC>
+          <AlwaysStartWebServerOnDebug>False</AlwaysStartWebServerOnDebug>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

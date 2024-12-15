@@ -1,0 +1,22 @@
+{% extends 'NewSystem/base.html' %}
+
+{% block content %}
+<div>
+    <div class="row">
+        <div class="col-sm-11 col-md-4 mx-auto mt-5 px-3">
+            <h1 class="fw-light">My Journal</h1>
+
+            <p class="fw-light">Welcome to My Journal, your safe and creative space to document your thoughts, ideas, and daily experiences. Whether you’re here to jot down your reflections, keep track of your goals, or explore your creativity through writing, this journal is designed to support and inspire you.</p>
+            {% if user.is_authenticated %}
+            <div>
+                <a href="{% url 'dashboard' %}" class="btn" style="background-color: lightcoral;">Let's Get Started!</a>
+            </div>
+            {% else %}
+            <div>
+                <a href="{% url 'signup' %}" class="btn" style="background-color: lightcoral;">Let's Get Started!</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+</div>
+{% endblock content %}

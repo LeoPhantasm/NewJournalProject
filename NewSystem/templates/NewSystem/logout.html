@@ -1,0 +1,14 @@
+{% extends 'NewSystem/base.html' %}
+
+{% block content %}
+<div class="row">
+    <div class="col-11 col-md-4 mx-auto mt-5">
+        <h2>You Have Been Logged Out</h2>
+        <div class="border-top pt-3">
+            <small >
+                <a href="{% url 'login' %}" class="btn" style="background-color: lightcoral" >Log In Again</a>
+            </small>
+        </div>'
+    </div>
+</div>
+{% endblock content %}

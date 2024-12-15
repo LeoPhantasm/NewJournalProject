@@ -1,0 +1,36 @@
+{% extends 'NewSystem/base.html' %}
+{% block content %}
+<section id="home">
+    <section class="section sectionEntryResults" id="entryResultsSection">
+        <div class="container">
+            <h2 class="heading-results">Journal Entries</h2>
+            <div class="d-flex justify-content-end">
+                <a href="{% url 'home' %}" class="btn" style="background-color: lightcoral">+ Add Entry</a>
+            </div>
+
+
+            {% for entry in Entry %}
+            <div class="container-row entryResultRow">
+                <div class="row">
+                    <div class="col-md-10 col-12 mx-auto mt-5">
+
+                        <div class="card" >
+                            <div class="card-body card-content">
+                                <h3 class="single-entry-heading single-entry-div card-content" >{{ entry.entry_title }}</h3>
+                                <h6 class="card-subtitle mb-2 single-entry-date"> {{ entry.date_posted }}</h6>
+                                <p class="single-entry-text card-content "> {{ entry.entry }}</p>
+
+                                    <a href="{% url 'edit-item' entry.id %}" class="btn" style="background-color: lightgray">Edit</a>
+                                    <a href="{% url 'delete-item' entry.id %}" class="btn" style="background-color: lightgray">Delete</a>
+</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+         
+</section>
+</section>
+    {% endblock content %}
